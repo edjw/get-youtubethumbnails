@@ -1,7 +1,6 @@
 "use strict";
-// window.onload(function() {
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
 
     Array.from(document.getElementsByClassName("yt_images")).forEach(function (item) {
         const imageHeight = item.naturalHeight;
