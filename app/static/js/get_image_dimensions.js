@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
         const src = item.src;
 
         const htmlString = `
-    <div class="text-center">
+    <div class="text-center" style="overflow-wrap: break-word;">
     <small><a href="${src}">${src}</a></small><br>
     <small>Original image height: ${imageHeight}px. Original image width:  ${imageWidth}px</small>
     </div>
