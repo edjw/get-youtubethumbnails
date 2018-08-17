@@ -8,7 +8,12 @@ def index():
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
-    yt_url = request.form['url_submit']
+
+    if request.form['url_submit']:
+        yt_url = request.form['url_submit']
+    else:
+        return redirect('/')
+
     images = get_youtube_thumbnail(yt_url)
     if images:
         return render_template('submit.html', title='Your Youtube Thumbnails', images=images)
