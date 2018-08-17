@@ -5,7 +5,7 @@
     <div class="col-10 offset-1 col-md-8 offset-md-2">
         <h2 class="text-center">YouTube video thumbnail</h2>
         <p class="text-center">
-            Here are the thumbnails for that YouTube video.<br>Right click on them and click <kbd>Save Image as…</kbd> to download them
+            Here are the thumbnails for that YouTube video.<br>Right click on them and click <kbd>Save Image As…</kbd> to download them
         </p>
     </div>
 </div>
@@ -28,5 +28,8 @@
         </div>
     </div>
 
-{% include 'includes/get_image_dimensions.html' %}
+{% endblock %}
+
+{% block scripts %}
+<script src="static/js/get_image_dimensions.js"></script>
 {% endblock %}

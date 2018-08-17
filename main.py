@@ -45,8 +45,8 @@ def check_non_existent_images(image_url):
 
 def create_youtube_image(video_id):
 
-    max_resolution_image = "http://i3.ytimg.com/vi/" + video_id + "/maxresdefault.jpg"
-    hq_default_image = "http://i3.ytimg.com/vi/" + video_id + "/hqdefault.jpg"
+    max_resolution_image = "https://i3.ytimg.com/vi/" + video_id + "/maxresdefault.jpg"
+    hq_default_image = "https://i3.ytimg.com/vi/" + video_id + "/hqdefault.jpg"
 
     image_urls = [max_resolution_image, hq_default_image]
 
