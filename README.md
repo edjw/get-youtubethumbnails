@@ -17,7 +17,8 @@ When you submit a YouTube URL, you get back the image, a link to that image, and
 ## Installation
 - `git clone` this repository
 - `pipenv install`
-- Add a file called `.env` into the top-level folder with `SECRET_KEY=long-string-of-text`, For local development, add a line saying `FLASK_DEBUG=1`
+- Add a file called `.env` with `SECRET_KEY=long-string-of-text` and `YOUTUBE_API_KEY="your-google-api-key". For local development, add a line saying `FLASK_DEBUG=1`
+
 
 
 ## Future development
@@ -42,4 +43,3 @@ Add the option of overlaying [a play button](https://png2.kisspng.com/sh/3143cad
 ### Javascript
 
 - Fill the input field with the demo link
-- Get the original height and width of the images. I may change this once I'm using Pillow to add overlays as Pillow can get this server-side(see Future Development above)
