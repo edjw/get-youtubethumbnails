@@ -5,7 +5,9 @@
     <div class="col-10 offset-1 col-md-8 offset-md-2">
         <h2 class="text-center">YouTube video thumbnail</h2>
         <p class="text-center">
-            Here are the thumbnails for that YouTube video.<br>Right click on them and click <kbd>Save Image As…</kbd> to download them
+            Here are the thumbnails for that YouTube video.
+            <br>Right click on them and click
+            <kbd>Save Image As…</kbd> to download them
         </p>
     </div>
 </div>
@@ -19,17 +21,16 @@
 {% endfor %}
 <hr>
 <div class="row mt-3 mt-sm-5 mb-5">
-        <div class="col-10 offset-1 col-md-8 offset-md-2">
-            <h3 class="text-center">
-                Get another thumbnail image
-            </h3>
-            {% include 'includes/form.html' %}
+    <div class="col-10 offset-1 col-md-8 offset-md-2">
+        <h3 class="text-center">
+            Get another thumbnail image
+        </h3>
+        {% include 'includes/form.html' %}
 
-        </div>
     </div>
+</div>
 
 {% endblock %}
-
 {% block scripts %}
 <script src="static/js/get_image_dimensions.js"></script>
 {% endblock %}

@@ -1,31 +1,30 @@
 {% extends "base.html" %}
-
 {% block content %}
 
 <div class="row mt-3 mt-sm-5">
     <div class="col-10 offset-1 col-md-8 offset-md-2">
         <h2 class="text-center">Get thumbnail images for YouTube Videos</h2>
         <p class="text-center">
-            Enter the URL of a YouTube video to get a thumbnail image for the video. Make sure you include the <kbd>https://</kbd> at the start of the URL.
+            Enter the URL of a YouTube video to get a thumbnail image for the video. Make sure you include the
+            <kbd>https://</kbd> at the start of the URL.
         </p>
     </div>
 </div>
 
 {% include 'includes/error.html' %}
-
 {% include 'includes/form.html' %}
 
-<div class="row mt-1">
+<div class="row mt-1 mb-5">
     <div class="col-10 offset-1 col-md-8 offset-md-2">
         <hr>
-        <p class="text-center">Demo:
+        <p class="text-center">Not got a link? Try this one
+            <br>
             <a href="#" id="example_link">https://www.youtube.com/watch?v=98fVjc4MfXQ</a>
         </p>
         <hr>
     </div>
 </div>
 {% endblock %}
-
 {% block scripts %}
 <script src="static/js/insert_url.js"></script>
 {% endblock %}

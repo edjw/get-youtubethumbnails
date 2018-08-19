@@ -3,20 +3,6 @@
     width: 50%;
 }
 
-html,
-body {
-    min-height: 100%;
-}
-
-.main {
-    min-height: 100%;
-    margin-bottom: -160px;
-}
-
-.footer {
-    height: 160px;
-}
-
 a:hover {
     text-decoration: none;
     color: #007bff;
@@ -25,3 +11,23 @@ a:hover {
 a {
     border-bottom: 2px solid #007bff;
 }
+
+/* sticky footer */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer,
+.navbar {
+    flex: none;
+}
+
+/* end sticky footer */
