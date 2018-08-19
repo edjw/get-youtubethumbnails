@@ -17,7 +17,7 @@ When you submit a YouTube URL, you get back the image, a link to that image, and
 ## Installation
 - `git clone` this repository
 - `pipenv install`
-- Add a file called `.env` with `SECRET_KEY=long-string-of-text`, For local development, add a line saying `FLASK_DEBUG=1`
+- Add a file called `.env` into the top-level folder with `SECRET_KEY=long-string-of-text`, For local development, add a line saying `FLASK_DEBUG=1`
 
 
 ## Future development
