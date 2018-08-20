@@ -67,6 +67,8 @@ def get_youtube_thumbnail(yt_url):
 
     if video_id:
         thumbnails_data = get_thumbnails_data(video_id, yt_url)
+
+        # This section only necessary because i.ytimg.com isn't whitelisted for outbound connections on Python Anywhere's free tier
         for key in thumbnails_data.items():
             url = key[1]["url"]
             url = url.replace("i.ytimg.com", "img.youtube.com")
