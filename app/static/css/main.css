@@ -12,8 +12,8 @@ a {
     border-bottom: 2px solid #007bff;
 }
 
-/* sticky footer */
 
+/* sticky footer */
 body {
     display: flex;
     flex-direction: column;
@@ -29,5 +29,4 @@ body {
 .navbar {
     flex: none;
 }
-
 /* end sticky footer */

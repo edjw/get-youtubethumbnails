@@ -29,7 +29,6 @@ Add the option of overlaying [a play button](https://png2.kisspng.com/sh/3143cad
 
 - Validate YouTube URLs
 - Get the correct YouTube video ID for the different types of YouTube URLs
-- Check if an thumbnail is just the image YouTube gives when no image exists using base64 hashing
 - Build the correct link to the image thumbnails
 
 ### Flask
