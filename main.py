@@ -42,7 +42,6 @@ def get_thumbnails_data(video_id, yt_url):
 
     response = get(request_url).json()
     thumbnails = response["items"][0]["snippet"]["thumbnails"]
-
     thumbnails_data = OrderedDict()
 
     for item in thumbnails.items():

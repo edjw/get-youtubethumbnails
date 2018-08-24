@@ -12,12 +12,16 @@ a {
     border-bottom: 2px solid #007bff;
 }
 
+<<<<<<< HEAD
 .url_submit_button {
     min-width: 150px;
 }
 
 
+=======
+>>>>>>> Pillow_add-play-button
 /* sticky footer */
+
 body {
     display: flex;
     flex-direction: column;
@@ -33,4 +37,5 @@ body {
 .navbar {
     flex: none;
 }
+
 /* end sticky footer */
