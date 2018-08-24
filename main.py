@@ -2,7 +2,7 @@ from urllib.parse import urlparse
 from requests import get
 from collections import OrderedDict
 
-from config import Config
+from config import YouTube_Config
 
 
 def validate_yt_url(parsed_url):
@@ -36,7 +36,7 @@ def get_yt_video_id(url):
 
 
 def get_thumbnails_data(video_id, yt_url):
-    youtube_api_key = Config.YOUTUBE_API_KEY
+    youtube_api_key = YouTube_Config.YOUTUBE_API_KEY
     youtube_api_url = "https://www.googleapis.com/youtube/v3/videos?id="
     request_url = youtube_api_url + video_id + "&part=snippet&key=" + youtube_api_key
 

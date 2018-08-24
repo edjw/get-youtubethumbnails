@@ -1,12 +1,12 @@
-from config import Config
+from config import Cloudinary_Config
 from urllib.parse import urlparse
 import cloudinary
 
 
 cloudinary.config.update = {
-    "cloud_name": Config.CLOUDINARY_CLOUD_NAME,
-    "api_key": Config.CLOUDINARY_API_KEY,
-    "api_secret": Config.CLOUDINARY_API_SECRET,
+    "cloud_name": Cloudinary_Config.CLOUDINARY_CLOUD_NAME,
+    "api_key": Cloudinary_Config.CLOUDINARY_API_KEY,
+    "api_secret": Cloudinary_Config.CLOUDINARY_API_SECRET,
 }
 
 

@@ -4,7 +4,7 @@ This is a web app that gets thumbnail images for YouTube videos. Paste in a YouT
 
 It works with URLs at these YouTube addresses: <code>https://www.youtube.com</code>, <code>https://youtube.com</code>, <code>https://youtu.be</code>, and <code>https://youtube-nocookie.com</code>.
 
-When you submit a YouTube URL, you get back the image, a link to that image, and the original height and width of that image (even if it's scaled down on your screen size).
+When you submit a YouTube URL, you get back the image, a link to that image, and the original height and width of that image (even if it's scaled down on your screen size). You can also download the image with a YouTube play logo overlaid on the top.
 
 ## Use cases
 
@@ -18,7 +18,7 @@ When you submit a YouTube URL, you get back the image, a link to that image, and
 
 - `git clone` this repository
 - `pipenv install`
-- Add a file called `.env` with `SECRET_KEY=long-string-of-text` and `YOUTUBE_API_KEY="your-google-api-key".` For local development, add another line saying `FLASK_DEBUG=1`
+- Add a file called `.env` something like this below. For local development, add another line saying `FLASK_DEBUG=1`
 
 ```env
 SECRET_KEY="long-string-of-text"
@@ -30,13 +30,13 @@ CLOUDINARY_API_SECRET="your-cloudinary-api-secret"
 
 ## Built with
 
-It relies heavily on the YouTube API for getting URLs to thumbnails and on [Cloudinary](https://cloudinary.com) for fetching the images and applying the play logos over the top.
+It relies heavily on the YouTube API for getting URLs to thumbnails and on [Cloudinary](https://cloudinary.com) for applying the play logos over the top and hosting that new image.
 
 ### Python
 
 - Validate YouTube URLs
 - Get the correct YouTube video ID for the different types of YouTube URLs
-- Get the thumnail data from YouTube's API using requests
+- Get the thumbnail data from YouTube's API using requests
 
 ### Flask
 
