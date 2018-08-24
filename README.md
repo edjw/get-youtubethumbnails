@@ -18,11 +18,7 @@ When you submit a YouTube URL, you get back the image, a link to that image, and
 
 - `git clone` this repository
 - `pipenv install`
-<<<<<<< HEAD
 - Add a file called `.env` with `SECRET_KEY=long-string-of-text` and `YOUTUBE_API_KEY="your-google-api-key".` For local development, add another line saying `FLASK_DEBUG=1`
-=======
-- Add a file called `.env` that looks something like this.
->>>>>>> Pillow_add-play-button
 
 ```env
 SECRET_KEY="long-string-of-text"
@@ -31,12 +27,6 @@ CLOUDINARY_CLOUD_NAME="your-cloudinary-cloud-name"
 CLOUDINARY_API_KEY="your-cloudinary-api-key"
 CLOUDINARY_API_SECRET="your-cloudinary-api-secret"
 ```
-
-<<<<<<< HEAD
-Add the option of overlaying [a play button](https://png2.kisspng.com/sh/3143cad342bc76a1b9480718d3f6da08/L0KzQYm3VMAzN5N4iZH0aYP2gLBuTfNwdaF6jNd7LXnmf7B6TglwfaV6etc2cHzkiX7plgR1d58ye95ycD3kgsW0kPxigV5njeZ9b36wRbLqUfQ1bGM6UaQ6ZEWxR4KAV8E2QWM2TaQ7NkW1Q4i3U8Y2OV91htk=/kisspng-computer-icons-youtube-play-button-clip-art-play-button-5ac1d4d25921d5.7177159215226523703651.png) over the image to help people make it obvious it's a clickable link to a video. I'll probably use [Pillow](https://pillow.readthedocs.io) for this.
-=======
-For local development, add a line to the `.env` file saying `FLASK_DEBUG=1`
->>>>>>> Pillow_add-play-button
 
 ## Built with
 
