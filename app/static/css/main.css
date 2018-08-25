@@ -13,10 +13,6 @@
     width: 12.5rem;
 }
 
-.image_download_button {
-    width: 100%;
-}
-
 a:hover {
     text-decoration: none;
     color: #007bff;
