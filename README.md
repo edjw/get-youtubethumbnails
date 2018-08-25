@@ -28,6 +28,21 @@ CLOUDINARY_API_KEY="your-cloudinary-api-key"
 CLOUDINARY_API_SECRET="your-cloudinary-api-secret"
 ```
 
+The WSGI `wsgi.py` file should look something like this (at least on [PythonAnywhere](https://www.pythonanywhere.com) where this is hosted).
+
+```py
+
+import sys
+
+path = '/home/your-path-to/get-youtubethumbnails'
+if path not in sys.path:
+    sys.path.append(path)
+
+from website import app as application
+```
+
+The site has only been tested on Flask 1.0.2 with Python 3.6 running on Python Anywhere.
+
 ## Built with
 
 It relies heavily on the YouTube API for getting URLs to thumbnails and on [Cloudinary](https://cloudinary.com) for applying the play logos over the top and hosting that new image.
