@@ -1,5 +1,5 @@
 <form action="{{ url_for('overlay_logo') }}" method="post">
     <div class="form-group d-flex justify-content-center">
-        <button type="submit" class="btn btn-sm btn-dark url_submit_button" name="image_submit" id="download_button_{{ loop.index }}" value="{{ data.url }}" style="min-width: 350px;">Download image overlaid with play button logo</button>
+        <button type="submit" class="btn btn-sm btn-dark image_download_button" name="image_submit" id="download_button_{{ loop.index }}" value="{{ data.url }}">Download image overlaid with play button logo</button>
     </div>
 </form>

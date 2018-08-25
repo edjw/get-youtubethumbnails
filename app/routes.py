@@ -21,11 +21,19 @@ def submit():
         return render_template(
             "thumbnails.html",
             title="Your Youtube Thumbnails",
-            thumbnails_data=thumbnails_data, yt_url=yt_url
+            thumbnails_data=thumbnails_data,
+            yt_url=yt_url,
         )
     else:
         flash("")
         return redirect("/")
+
+
+@app.route("/image", methods=["GET", "POST"])
+def download_image():
+
+    image_url = request.form.get("download_image")
+    return redirect(image_url)
 
 
 @app.route("/overlay", methods=["GET", "POST"])

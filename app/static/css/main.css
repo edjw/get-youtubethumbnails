@@ -1,6 +1,20 @@
+.navbar-links {
+    font-size: 1rem;
+    padding-top: .5625rem;
+    padding-bottom: .375rem;
+}
+
+.navbar-links:hover {
+    color: inherit;
+}
+
 .url_submit_button {
     display: block;
-    width: 50%;
+    width: 12.5rem;
+}
+
+.image_download_button {
+    width: 100%;
 }
 
 a:hover {
@@ -11,11 +25,6 @@ a:hover {
 a {
     border-bottom: 2px solid #007bff;
 }
-
-.url_submit_button {
-    min-width: 150px;
-}
-
 
 /* sticky footer */
 
