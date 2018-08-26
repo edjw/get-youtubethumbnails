@@ -11,6 +11,7 @@ When you submit a YouTube URL, you get back the image, a link to that image, and
 **Linking to YouTube videos** when you can't or don't want to embed a video
 
 - in emails
+- in presentation slides (PowerPoint etc)
 - in websites where you don't want any Javascript
 - in websites where you want to minimise data transfers
 
