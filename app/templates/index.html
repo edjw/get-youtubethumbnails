@@ -7,8 +7,6 @@
         <p class="text-center">
             Enter the URL of a YouTube video to get the available thumbnail images for the video
         </p>
-        <p class="text-center">Make sure you include the <kbd>https://</kbd> at the start of the URL
-        </p>
     </div>
 </div>
 
@@ -20,12 +18,34 @@
         <hr>
         <p class="text-center">Not got a link? Try this one
             <br>
-            <a href="#" id="example_link">https://www.youtube.com/watch?v=98fVjc4MfXQ</a>
+            <a href="#" id="example_link">https://www.youtube.com/watch?v=3WM9OdcSxZM</a>
         </p>
         <hr>
     </div>
 </div>
-{% endblock %}
-{% block scripts %}
+
+<div class="row mt-3 mb-5">
+    <div class="col-10 offset-1 col-md-8 offset-md-2">
+        <h2 class="text-center">Example images
+        </h2>
+    </div>
+    <div class="row mt-3">
+        <div class="col-10 offset-1 col-lg-5 offset-lg-1 mb-5 mb-lg-0">
+            <p class="text-center mb-0">
+                <small>Original YouTube thumbnail image</small>
+            </p>
+            <img src="static/img/example-original.jpg" class="img-fluid">
+        </div>
+        <div class="col-10 offset-1 col-lg-5 offset-lg-0">
+            <p class="text-center mb-0">
+                <small>YouTube thumbnail image with play logo</small>
+            </p>
+            <img src="static/img/example-logo.jpg" class="img-fluid">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %} {% block scripts %}
 <script src="static/js/insert_url.js"></script>
 {% endblock %}

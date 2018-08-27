@@ -11,8 +11,12 @@ def validate_yt_url(parsed_url):
         "youtube.com",
         "youtu.be",
         "youtube-nocookie.com",
+        "www.youtube-nocookie.com",
     ]
     netloc = parsed_url.netloc
+    if netloc == "":
+        netloc = parsed_url.path.split("/")[0]
+
     if netloc in valid_netlocs:
         return True
     else:
@@ -21,18 +25,22 @@ def validate_yt_url(parsed_url):
 
 def get_yt_video_id(url):
 
-    parsed_url = urlparse(url)
-
+    parsed_url = urlparse(url, "https")
     if validate_yt_url(parsed_url) is False:
         return False
 
     domain = parsed_url.netloc
-    if domain in ["www.youtube.com", "youtube.com"]:
-        return str(parsed_url.query.lstrip("v="))
+    if domain == "":
+        domain = parsed_url.path.split("/")[0]
+
+    if domain in ["www.youtube.com", "youtube.com"] and parsed_url.query.startswith(
+        "v="
+    ):
+        return str(parsed_url.query.split("v=")[1])
     elif domain == "youtu.be":
-        return str(parsed_url.path.lstrip("/"))
-    elif domain == "youtube-nocookie.com":
-        return str(parsed_url.path.lstrip("/embed/"))
+        return str(parsed_url.path.split("/")[1])
+    elif domain in ["youtube-nocookie.com", "www.youtube-nocookie.com"]:
+        return str(parsed_url.path.split("/")[2])
 
 
 def get_thumbnails_data(video_id, yt_url):
@@ -41,23 +49,28 @@ def get_thumbnails_data(video_id, yt_url):
     request_url = youtube_api_url + video_id + "&part=snippet&key=" + youtube_api_key
 
     response = get(request_url).json()
-    thumbnails = response["items"][0]["snippet"]["thumbnails"]
-    thumbnails_data = OrderedDict()
 
-    for item in thumbnails.items():
-        thumbnails_data.update(
-            {
-                item[0]: {
-                    "url": item[1]["url"],
-                    "height": item[1]["height"],
-                    "width": item[1]["width"],
+    if len(response["items"]) > 0:
+        thumbnails = response["items"][0]["snippet"]["thumbnails"]
+        thumbnails_data = OrderedDict()
+
+        for item in thumbnails.items():
+            thumbnails_data.update(
+                {
+                    item[0]: {
+                        "url": item[1]["url"],
+                        "height": item[1]["height"],
+                        "width": item[1]["width"],
+                    }
                 }
-            }
-        )
+            )
 
-    thumbnails_data = OrderedDict(reversed(list(thumbnails_data.items())))
+        thumbnails_data = OrderedDict(reversed(list(thumbnails_data.items())))
 
-    return thumbnails_data
+        return thumbnails_data
+
+    else:
+        return False
 
 
 def get_youtube_thumbnail(yt_url):
@@ -67,13 +80,14 @@ def get_youtube_thumbnail(yt_url):
     if video_id:
         thumbnails_data = get_thumbnails_data(video_id, yt_url)
 
-        # This section only necessary because i.ytimg.com isn't whitelisted for outbound connections on Python Anywhere's free tier
-        for key in thumbnails_data.items():
-            url = key[1]["url"]
-            url = url.replace("i.ytimg.com", "img.youtube.com")
-            key[1]["url"] = url
+        if thumbnails_data:
+            # This section only necessary because i.ytimg.com isn't whitelisted for outbound connections on Python Anywhere's free tier
+            for key in thumbnails_data.items():
+                url = key[1]["url"]
+                url = url.replace("i.ytimg.com", "img.youtube.com")
+                key[1]["url"] = url
 
-        return thumbnails_data
+            return thumbnails_data
 
     else:
         return False
