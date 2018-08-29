@@ -9,6 +9,7 @@ python-dotenv = "*"
 requests = "*"
 cloudinary = "*"
 flask-talisman = "*"
+flask-seasurf = "*"
 
 [dev-packages]
 
