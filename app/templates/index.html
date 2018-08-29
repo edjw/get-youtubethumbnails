@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
 <div class="row mt-3 mt-sm-5">
     <div class="col-10 offset-1 col-md-8 offset-md-2">
@@ -9,7 +10,8 @@
     </div>
 </div>
 
-{% include 'includes/error.html' %} {% include 'includes/homepage_form.html' %}
+{% include 'includes/error.html' %}
+{% include 'includes/homepage_form.html' %}
 
 <div class="row mt-1 mb-5">
     <div class="col-10 offset-1 col-md-8 offset-md-2">
@@ -43,6 +45,7 @@
     </div>
 </div>
 
-{% endblock %} {% block scripts %}
+{% endblock %}
+{% block scripts %}
 <script src="static/js/insert_url.js"></script>
 {% endblock %}
