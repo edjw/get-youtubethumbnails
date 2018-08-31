@@ -5,8 +5,9 @@ from flask_seasurf import SeaSurf
 app = Flask(__name__)
 csp = {
     "default-src": "'self'",
-    "style-src": ["'self'", "stackpath.bootstrapcdn.com"],
-    "img-src": ["'self'", "img.youtube.com"],
+    "style-src": ["'self'", "https://stackpath.bootstrapcdn.com"],
+    "img-src": ["'self'", "https://img.youtube.com", "https://matomo.edjw.co.uk"],
+    "script-src": ["'self'", "https://matomo.edjw.co.uk"],
 }
 
 Talisman(app, referrer_policy="same-origin", content_security_policy=csp)

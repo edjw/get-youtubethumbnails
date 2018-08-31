@@ -1,3 +1,7 @@
+.navbar-brand {
+    padding-top: .375rem;
+}
+
 .navbar-links {
     font-size: 1rem;
     padding-top: .5625rem;
@@ -22,8 +26,11 @@ a {
     border-bottom: 2px solid #007bff;
 }
 
-/* sticky footer */
+.mobile-nav-divider {
+    border-bottom: 2px solid #007bff;
+}
 
+/* sticky footer */
 body {
     display: flex;
     flex-direction: column;
@@ -35,9 +42,23 @@ body {
     flex: 1 0 auto;
 }
 
-.footer,
-.navbar {
+.footer {
     flex: none;
 }
 
 /* end sticky footer */
+/* buy me a coffee */
+.bmc-button {}
+
+.bmc-button img {
+    height: 1.275rem;
+    box-shadow: none;
+    border: none;
+    vertical-align: middle;
+}
+
+.bmc-button>span {
+    margin-left: .3125rem;
+}
+
+/* end buy me a coffee */
