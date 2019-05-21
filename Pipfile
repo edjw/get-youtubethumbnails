@@ -10,6 +10,8 @@ requests = "*"
 cloudinary = "*"
 flask-talisman = "*"
 flask-seasurf = "*"
+urllib3 = ">=1.24.2"
+Jinja2 = ">=2.10.1"
 
 [dev-packages]
 
