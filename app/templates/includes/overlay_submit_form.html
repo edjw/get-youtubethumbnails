@@ -1,6 +1,6 @@
 <form action="{{ url_for('overlay_logo') }}" method="post">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
     <div class="form-group d-flex justify-content-center">
-        <button type="submit" class="btn btn-sm btn-dark w-100 image_download_button" name="image_submit" id="download_button_{{ loop.index }}" value="{{ data.url }}">Download image overlaid with play button logo</button>
+        <button type="submit" class="btn btn-sm btn-dark w-100 image_download_button" name="image_submit" id="download_button_{{ loop.index }}" value="{{ data.url }}">Download image with play button logo</button>
     </div>
 </form>
