@@ -1,5 +1,12 @@
 # Get YouTube Thumbnails
 
+This broke in production and honestly I couldn't remember enough of the project to work it out. I've archived this project. And I've rebuilt it using Svelte and Netlify's serverless functions. It might still be a little rough around the edges.
+
+<https://getyoutubethumbnails.netlify.app>
+
+<https://github.com/edjw/get-youtube-thumbnails-svelte>
+----
+
 This is a web app that gets thumbnail images for YouTube videos. Paste in a YouTube URL and it gives you the thumbnails that are available for that video.
 
 It works with URLs at these YouTube addresses: <code>https://www.youtube.com</code>, <code>https://youtube.com</code>, <code>https://youtu.be</code>, and <code>https://youtube-nocookie.com</code>.
