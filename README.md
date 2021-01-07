@@ -5,6 +5,8 @@ This broke in production and honestly I couldn't remember enough of the project 
 <https://getyoutubethumbnails.netlify.app>
 
 <https://github.com/edjw/get-youtube-thumbnails-svelte>
+
+
 ----
 
 This is a web app that gets thumbnail images for YouTube videos. Paste in a YouTube URL and it gives you the thumbnails that are available for that video.
